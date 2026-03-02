@@ -1,4 +1,4 @@
 package fr.campus.dungeoncrawler.items;
 
-public class Potion {
+public class OffensiveEquipment {
 }

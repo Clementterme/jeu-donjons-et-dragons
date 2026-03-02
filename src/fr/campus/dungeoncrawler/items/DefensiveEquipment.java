@@ -1,4 +1,4 @@
 package fr.campus.dungeoncrawler.items;
 
-public class Weapon {
+public class DefensiveEquipment {
 }
