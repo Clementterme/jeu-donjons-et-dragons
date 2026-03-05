@@ -36,8 +36,9 @@ public class Character {
     }
 
     public void displayStats() {
-        System.out.println("Nom : " + name);
-        System.out.println("Vie : " + hp);
-        System.out.println("Attaque : " + attack);
+        System.out.println("Classe : " + getClass().getSimpleName());
+        System.out.println("Nom : " + getName());
+        System.out.println("Vie : " + getHp());
+        System.out.println("Attaque : " + getAttack());
     }
 }
