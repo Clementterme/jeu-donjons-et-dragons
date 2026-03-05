@@ -44,7 +44,6 @@ public class Menu {
     public static void characterCreation() {
         Scanner sc = new Scanner(System.in);
         int choix = 0;
-        String character = "";
 
         while (choix != 1 && choix != 2) {
             System.out.println("Vous avez choisi : Nouveau personnage");
@@ -70,7 +69,7 @@ public class Menu {
             System.out.print("Nom de votre personnage : ");
             String name = sc.next();
 
-            Character player = null;
+            Character player;
 
             if (choix == 1) {
                 player = new Warrior(name);
