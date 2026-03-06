@@ -12,10 +12,11 @@ public class Menu {
         Scanner sc = new Scanner(System.in);
         int choix = 0;
 
-        while (choix != 1 && choix != 2) {
+        while (choix != 1 && choix != 2 && choix != 3) {
             System.out.println("Menu :");
-            System.out.println("1 - Nouveau personnage");
-            System.out.println("2 - Quitter le jeu");
+            System.out.println("1 - Commencer la partie");
+            System.out.println("2 - Nouveau personnage");
+            System.out.println("3 - Quitter le jeu");
             System.out.print("Votre choix : ");
 
             // Vérification du type int
@@ -29,9 +30,12 @@ public class Menu {
 
             switch (choix) {
                 case 1:
-                    characterCreation();
+                    System.out.println("La partie commence !");
                     break;
                 case 2:
+                    characterCreation();
+                    break;
+                case 3:
                     System.out.println("Au revoir !");
                     break;
                 default:
