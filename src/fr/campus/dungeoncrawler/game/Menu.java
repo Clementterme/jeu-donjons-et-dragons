@@ -7,7 +7,8 @@ import fr.campus.dungeoncrawler.character.Wizard;
 import java.util.Scanner;
 
 public class Menu {
-    public static void main() {
+
+    public void mainMenu() {
         Scanner sc = new Scanner(System.in);
         int choix = 0;
 
@@ -37,11 +38,9 @@ public class Menu {
                     System.out.println("Choix invalide");
             }
         }
-
-        sc.close();
     }
 
-    public static void characterCreation() {
+    public void characterCreation() {
         Scanner sc = new Scanner(System.in);
         int choix = 0;
 
@@ -93,7 +92,7 @@ public class Menu {
             } else {
                 System.out.println("Veuillez entrer un nombre valide !");
                 sc.next();
-//            continue;
+            continue;
             }
 
             switch (choix) {
@@ -107,7 +106,7 @@ public class Menu {
                     System.out.println("Votre nouveau nom est " + newName);
                     break;
                 case 3:
-                    main();
+                    mainMenu();
                     break;
                 default:
                     System.out.println("Choix invalide");
