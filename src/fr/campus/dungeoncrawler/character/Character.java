@@ -1,6 +1,7 @@
 package fr.campus.dungeoncrawler.character;
 
 public abstract class Character {
+
     private String name;
     private int hp;
     private int attack;

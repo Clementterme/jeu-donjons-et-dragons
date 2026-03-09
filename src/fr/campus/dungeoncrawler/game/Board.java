@@ -29,13 +29,17 @@ public class Board {
     }
 
     public void print() {
+        int numberTile = 1;
         for (int i = 0; i < board.length; i++) {
             if(board[i] == null) {
                 System.out.print(".");
             } else {
                 System.out.print(board[i]);
+                numberTile = i + 1;
             }
         }
+        System.out.println();
+        System.out.println("Case " + numberTile + " / " + board.length);
         System.out.println();
     }
 
