@@ -13,7 +13,7 @@ public class Menu {
         int choix = 0;
         Character player = null;
 
-        while (choix != 1) {
+        while (true) {
             System.out.println("Menu :");
             System.out.println("1 - Commencer la partie");
             System.out.println("2 - Nouveau personnage");
@@ -31,8 +31,13 @@ public class Menu {
 
             switch (choix) {
                 case 1:
-                    System.out.println("La partie commence !");
-                    break;
+                    if (player == null) {
+                        System.out.println("Vous devez créer un personnage avant de commencer !");
+                        break;
+                    } else {
+                        System.out.println("La partie commence !");
+                        return player;
+                    }
                 case 2:
                     player = characterCreation();
                     break;
@@ -45,7 +50,6 @@ public class Menu {
                     System.out.println("Choix invalide");
             }
         }
-        return player;
     }
 
     public Character characterCreation() {
