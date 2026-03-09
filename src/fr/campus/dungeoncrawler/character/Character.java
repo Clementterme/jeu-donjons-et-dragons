@@ -1,9 +1,9 @@
 package fr.campus.dungeoncrawler.character;
 
-public class Character {
-    protected String name;
-    protected int hp;
-    protected int attack;
+public abstract class Character {
+    private String name;
+    private int hp;
+    private int attack;
 
     public Character(String name, int hp, int attack) {
         this.name = name;

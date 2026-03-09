@@ -11,8 +11,9 @@ public class Menu {
     public void mainMenu() {
         Scanner sc = new Scanner(System.in);
         int choix = 0;
+        Character player = null;
 
-        while (choix != 1 && choix != 2 && choix != 3) {
+        while (choix != 3) {
             System.out.println("Menu :");
             System.out.println("1 - Commencer la partie");
             System.out.println("2 - Nouveau personnage");
@@ -33,7 +34,7 @@ public class Menu {
                     System.out.println("La partie commence !");
                     break;
                 case 2:
-                    characterCreation();
+                    player = characterCreation();
                     break;
                 case 3:
                     System.out.println("Au revoir !");
@@ -44,7 +45,7 @@ public class Menu {
         }
     }
 
-    public void characterCreation() {
+    public Character characterCreation() {
         Scanner sc = new Scanner(System.in);
         int choix = 0;
 
@@ -110,11 +111,11 @@ public class Menu {
                     System.out.println("Votre nouveau nom est " + newName);
                     break;
                 case 3:
-                    mainMenu();
                     break;
                 default:
                     System.out.println("Choix invalide");
             }
         }
+        return player;
     }
 }
