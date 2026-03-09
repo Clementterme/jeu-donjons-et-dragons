@@ -8,12 +8,12 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public void mainMenu() {
+    public Character mainMenu() {
         Scanner sc = new Scanner(System.in);
         int choix = 0;
         Character player = null;
 
-        while (choix != 3) {
+        while (choix != 1) {
             System.out.println("Menu :");
             System.out.println("1 - Commencer la partie");
             System.out.println("2 - Nouveau personnage");
@@ -38,11 +38,14 @@ public class Menu {
                     break;
                 case 3:
                     System.out.println("Au revoir !");
+                    // Pour mettre fin au programme
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Choix invalide");
             }
         }
+        return player;
     }
 
     public Character characterCreation() {

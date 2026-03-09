@@ -41,4 +41,9 @@ public abstract class Character {
         System.out.println("Vie : " + getHp());
         System.out.println("Attaque : " + getAttack());
     }
+
+    @Override
+    public String toString() {
+        return "P";
+    }
 }
