@@ -16,7 +16,7 @@ public class Main {
             Game game = new Game(new Dice(), sc);
             Character player;
             player = menu.mainMenu();
-            game.startGame(player);
+            game.startGame(player, sc);
 
     }
 }

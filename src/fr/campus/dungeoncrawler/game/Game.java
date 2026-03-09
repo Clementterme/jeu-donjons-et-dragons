@@ -17,13 +17,42 @@ public class Game {
         this.scanner = scanner;
     }
 
-    public void startGame(Character player) {
-            initGame(player);
-            while (!checkWin()) {
-                loop();
+    public void startGame(Character player, Scanner sc) {
+        initGame(player);
+        while (!checkWin()) {
+            loop();
+        }
+        board.print();
+        System.out.println("On a gagné !");
+
+        int choix = 0;
+
+        while (choix != 2) {
+            System.out.println("1 - Recommencer une partie");
+            System.out.println("2 - Quitter le jeu");
+            System.out.print("Votre choix : ");
+
+            // Vérification du type int
+            if (sc.hasNextInt()) {
+                choix = sc.nextInt();
+            } else {
+                System.out.println("Veuillez entrer un nombre valide !");
+                sc.next();
+                continue;
             }
-            board.print();
-            System.out.println("On a gagné !");
+
+            sc.nextLine();
+
+            switch (choix) {
+                case 1:
+                    startGame(player, sc);
+                case 2:
+                    break;
+                default:
+                    System.out.println("Choix invalide");
+            }
+        }
+
     }
 
     public void initGame(Character player) {
