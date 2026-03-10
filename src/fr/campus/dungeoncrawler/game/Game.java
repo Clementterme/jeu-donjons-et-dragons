@@ -17,6 +17,11 @@ public class Game {
         this.scanner = scanner;
     }
 
+    /**
+     * Lance la partie et fais des tours de jeu jusqu'à ce que l'utilisateur arrive au bout du plateau
+     * @param player le joueur qui a été créer
+     * @param sc le scanner pour l'intéraction avec l'utilisateur
+     */
     public void startGame(Character player, Scanner sc) {
         initGame(player);
         while (!checkWin()) {
@@ -55,12 +60,19 @@ public class Game {
 
     }
 
+    /**
+     * Créer le plateau de jeu et place le joueur sur la case 1
+     * @param player le joueur qui a été créer
+     */
     public void initGame(Character player) {
         this.player = player;
         board = new Board(64);
         board.setTile(0, player);
     }
 
+    /**
+     * Boucle d'un tour de jeu : affichage du plateau, lancer de dé puis déplacement du personnage
+     */
     public void loop() {
         board.print();
         int roll = dice.roll(6);
@@ -68,6 +80,10 @@ public class Game {
         this.scanner.nextLine();
     }
 
+    /**
+     * Vérifie si le joueur se trouve sur la dernière case du plateau
+     * @return vrai si le joueur se trouve sur la dernière case du plateau
+     */
     public boolean checkWin() {
         return board.getTile(63) == player;
     }
