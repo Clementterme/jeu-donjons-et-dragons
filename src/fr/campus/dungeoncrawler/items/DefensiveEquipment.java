@@ -1,22 +1,13 @@
 package fr.campus.dungeoncrawler.items;
 
-public class DefensiveEquipment {
-    private String type;
+public abstract class DefensiveEquipment {
+
     private String name;
-    private int health;
+    private int hp;
 
-    public DefensiveEquipment(String type, String name, int health) {
-        this.type = type;
+    public DefensiveEquipment(String name, int hp) {
         this.name = name;
-        this.health = health;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
+        this.hp = hp;
     }
 
     public String getName() {
@@ -27,11 +18,11 @@ public class DefensiveEquipment {
         this.name = name;
     }
 
-    public int getHealth() {
-        return health;
+    public int getHp() {
+        return hp;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public void setHp(int hp) {
+        this.hp = hp;
     }
 }

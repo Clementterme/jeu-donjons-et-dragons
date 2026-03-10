@@ -1,22 +1,13 @@
 package fr.campus.dungeoncrawler.items;
 
-public class OffensiveEquipment {
-    private String type;
+public abstract class OffensiveEquipment {
+
     private String name;
     private int attack;
 
-    public OffensiveEquipment(String type, String name, int attack) {
-        this.type = type;
+    public OffensiveEquipment(String name, int attack) {
         this.name = name;
         this.attack = attack;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getName() {
