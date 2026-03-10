@@ -13,4 +13,9 @@ public class Warrior extends Character {
         System.out.println("Vie : " + getHp());
         System.out.println("Attaque : " + getAttack());
     }
+
+    @Override
+    public String toString() {
+        return "⚔\uFE0F\uD83D\uDEE1\uFE0F";
+    }
 }

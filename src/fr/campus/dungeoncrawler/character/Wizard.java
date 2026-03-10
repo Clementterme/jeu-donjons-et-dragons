@@ -13,4 +13,9 @@ public class Wizard extends Character {
         System.out.println("Vie : " + getHp());
         System.out.println("Attaque : " + getAttack());
     }
+
+    @Override
+    public String toString() {
+        return "\uD83E\uDDD9\uD83C\uDFFB\u200D♂\uFE0F";
+    }
 }
