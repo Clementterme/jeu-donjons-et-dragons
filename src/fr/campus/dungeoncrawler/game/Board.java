@@ -21,11 +21,21 @@ public class Board {
         Object character = getTile(characterPosition);
         setTile(characterPosition, null);
 
-        characterPosition += move;
-        if (characterPosition >= board.length) {
+        // Exception si le personnage dépasse la case finale
+        try {
+            characterPosition += move;
+            setTile(characterPosition, character);
+        } catch (ArrayIndexOutOfBoundsException e) {
             characterPosition = board.length - 1;
+            setTile(characterPosition, character);
         }
-        setTile(characterPosition, character);
+
+//        characterPosition += move;
+//        if (characterPosition >= board.length) {
+//            characterPosition = board.length - 1;
+//        }
+//        setTile(characterPosition, character);
+//
     }
 
     public void print() {
